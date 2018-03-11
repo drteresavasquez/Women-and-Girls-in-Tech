@@ -10,6 +10,9 @@ cd Women-and-Girls-in-Tech
 cd lib
 npm install
 grunt
+```
+In a new terminal window run
+```
 hs -o
 ```
 
