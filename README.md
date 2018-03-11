@@ -1,6 +1,6 @@
 # Women and Girls in Tech
 
-An app that helps women and girls decide if a tech career path is right for them.
+An app that helps women and girls decide if a tech career in coding and software development is right for them.
 
 ## Project Setup
 To clone this project, run the following in your command line.
