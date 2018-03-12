@@ -1,23 +1,40 @@
 "use strict";
 
-let $ = require('jquery');
+let $ = require('jquery'),
+    home = require('./homePage'),
+    women = require('./womenInITpage'),
+    money = require('./moneyPage'),
+    code = require('./codePage'),
+    info = require('./infoPage');
 
-$('#women, #money, #code, #info').click((e) => {
-    let clicked = e.currentTarget.id;
+$("#home").addClass("active");
+home.buildHomeOnDOM();
+
+$('#women, #money, #code, #info, #home').click((e) => {
     $(".container").html("");
+    $('#money, #code, #info, #women, #home').removeClass("active");
+    let clicked = e.currentTarget.id;
 
     switch (clicked) {
+        case 'home':
+            $("#home").addClass("active");
+            home.buildHomeOnDOM();
+            break;
         case 'women':
-            console.log(clicked);
+            $("#women").addClass("active");
+            women.buildWomenOnDOM();
             break;
         case 'money':
-            console.log(clicked);
+            $("#money").addClass("active");
+            money.buildMoneyOnDOM();
             break;
         case 'code':
-            console.log(clicked);
+            $("#code").addClass("active");
+            code.buildCodeOnDOM();
             break;
         case 'info':
-            console.log(clicked);
+            $("#info").addClass("active");
+            info.buildInfoOnDOM();
             break;
         default:
             console.log("Default");

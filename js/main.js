@@ -9,3 +9,6 @@ require("./navElements");
 // http://flexboxfroggy.com/
 // https://codecombat.com/
 // https://codeacademy.com
+
+
+//https://medium.freecodecamp.org/the-6-most-desirable-coding-jobs-and-the-types-of-people-drawn-to-each-aebac45fd7f7
