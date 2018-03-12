@@ -44,4 +44,19 @@ a {
     }
 }
 
-@media only screen and (max-width: 600px) {}
+.card{
+    margin-bottom: 10px;
+}
+.card-img-top{
+    height:180px;
+}
+
+@media only screen and (max-width: 600px) {
+    .icons {
+        height: 45px;
+        &.icons a {
+            height: 45px;
+            padding: 8px;
+        }
+    }
+}
