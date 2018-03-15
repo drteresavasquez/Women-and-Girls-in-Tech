@@ -62,21 +62,20 @@ function madlibsStart() {
 
     //get all user values and pass to printMadlibs() along with last element from JSON file (madlibs solution)
     $("#code-button").on("click", () => {
-        printMadlibs(
-            [
-                $("#word1").val(),
-                $("#word2").val(),
-                $("#word3").val(),
-                $("#word4").val(),
-                $("#word5").val(),
-                $("#word6").val(),
-                $("#word7").val(),
-                $("#word8").val(),
-                $("#word9").val(),
-                $("#word10").val(),
-                ""
-            ],
-            lib);
+        let array = [
+            $("#word1").val() ? $("#word1").val() : "",
+            $("#word2").val() ? $("#word2").val() : "",
+            $("#word3").val() ? $("#word3").val() : "",
+            $("#word4").val() ? $("#word4").val() : "",
+            $("#word5").val() ? $("#word5").val() : "",
+            $("#word6").val() ? $("#word6").val() : "",
+            $("#word7").val() ? $("#word7").val() : "",
+            $("#word8").val() ? $("#word8").val() : "",
+            $("#word9").val() ? $("#word9").val() : "",
+            $("#word10").val() ? $("#word10").val() : "",
+            ""
+        ];
+        printMadlibs(array, lib);
     });
 }
 
