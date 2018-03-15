@@ -13,9 +13,9 @@ let buildCodeOnDOM = () => {
     $(".container").append(`
     <h3 class="page-heading">Code a MadLibs App!</h3>
     <div class="row">
-        <div class="col-md-4 code-app">            
+        <div class="col-md-5 code-app">            
         </div>
-        <div class="col-md-8 codepen">
+        <div class="col-md-7 codepen">
         </div>
     </div>`);
 
@@ -38,7 +38,7 @@ function generateMadlibs() {
             lib = value.split("/");
             keys.forEach((item) => {
                 $(".word-inputs").append(`
-            <input type="text" class="form-control" id="word${item}" placeholder="${selected[item]}">`);
+            <input type="text" class="form-control madlib-inputs" id="word${item}" placeholder="${selected[item]}">`);
             });
         });
 }

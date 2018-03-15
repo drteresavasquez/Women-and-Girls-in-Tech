@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Itim');
+
+$purple: #2A0D45;
+
 .navbar {
     margin: 0;
     width: 100%;
     padding: 0 !important;
 }
 
-.page-heading{
+.page-heading {
     padding-left: 20px;
 }
 
@@ -17,7 +21,7 @@ a {
 }
 
 .header-2 {
-    background-color: #2A0D45;
+    background-color: $purple;
 }
 
 .container {
@@ -56,31 +60,43 @@ a {
     // height: 180px;
 }
 
-.code-app{
+input {
+    font-family: 'Itim', cursive;
+    font-size: 3em;
+    height: 3em;
+    margin-bottom: 5px;
+    border: none;
+    padding: 10px;
+}
+
+input::placeholder{
+    font-size: 1.2em;
+    color: red;
+}
+
+.code-app {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
-.code-button{
+
+.code-button {
     cursor: pointer;
 }
-.word-inputs{
+
+.word-inputs {
     text-align: left;
 }
 
-
 @media only screen and (max-width: 600px) {
-    .icons a{
+    .icons a {
         padding: 0 0 0 0;
     }
-    .icon-text{
+    .icon-text {
         font-size: .6em;
     }
-    .card-img-top {
-        height: 100%;
-    }
-    .page-heading{
+    .page-heading {
         padding-left: 0px;
         text-align: center;
     }
