@@ -18,10 +18,15 @@ let buildCodeOnDOM = () => {
         <div class="col-md codepen">
         </div>
     </div>`);
+
+    //append madlibs app to DOM
     madlibsStart();
+
+    //append codepen area to DOM
     codepenArea();
 };
 
+//randomly select madlibs from JSON and create input fields for DOM
 function generateMadlibs() {
     getMadLibsData()
         .then((data) => {
@@ -29,6 +34,7 @@ function generateMadlibs() {
             let keys = Object.keys(selected);
             let full = keys.pop();
             let value = selected[full];
+            //break the solution on "," to create array
             lib = value.split(",");
             keys.forEach((item) => {
                 $(".word-inputs").append(`<label for="word${item}">${selected[item]}</label>
@@ -37,6 +43,7 @@ function generateMadlibs() {
         });
 }
 
+//create card element to place on DOM
 function madlibsStart() {
     $(".code-app").html("");
     $(".code-app").append(`<div class="card mx-auto" style="width: 90%;">
@@ -49,10 +56,12 @@ function madlibsStart() {
             <a href="#" id="code-button" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>`);
+
+    //randomly select a madlib from JSON file and add to DOM $(".word-inputs")
     generateMadlibs();
 
+    //get all user values and pass to printMadlibs() along with last element from JSON file (madlibs solution)
     $("#code-button").on("click", () => {
-        let noun = $("#word1").val();
         printMadlibs(
             [
                 $("#word1").val(),
@@ -70,6 +79,7 @@ function madlibsStart() {
     });
 }
 
+//accepts array of user input and array of the solution to merge and print to DOM
 function printMadlibs(array, lib) {
     $(".code-app").html("");
     $(".code-app").append(`<div class="card mx-auto" style="width: 90%;">
@@ -87,6 +97,7 @@ function printMadlibs(array, lib) {
     });
 
     $("#play-again-button").on("click", () => {
+        //start a new random madlib
         madlibsStart();
     });
 }
