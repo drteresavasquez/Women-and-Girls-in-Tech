@@ -1,6 +1,13 @@
 "use strict";
 
-let $ = require('jquery');
+let $ = require('jquery'),
+    lib;
+
+function getMadLibsData() {
+    return $.ajax({
+        url: "./js/madlibs.json"
+    });
+}
 
 let buildCodeOnDOM = () => {
     $(".container").append(`
@@ -11,40 +18,80 @@ let buildCodeOnDOM = () => {
         <div class="col-md codepen">
         </div>
     </div>`);
-
     madlibsStart();
     codepenArea();
-
 };
 
-function madlibsStart(){
+function generateMadlibs() {
+    getMadLibsData()
+        .then((data) => {
+            var selected = data[Math.floor(Math.random() * data.length)];
+            let keys = Object.keys(selected);
+            let full = keys.pop();
+            let value = selected[full];
+            lib = value.split(",");
+            keys.forEach((item) => {
+                $(".word-inputs").append(`<label for="word${item}">${selected[item]}</label>
+            <input type="text" class="form-control" id="word${item}" placeholder="placeholder">`);
+            });
+        });
+}
+
+function madlibsStart() {
     $(".code-app").html("");
-        $(".code-app").append(`<div class="card mx-auto" style="width: 90%;">
+    $(".code-app").append(`<div class="card mx-auto" style="width: 90%;">
         <img class="card-img-top" src="./images/madlibs.jpeg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Enter Your Words...</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text word-inputs"> 
+            
+            </p>
             <a href="#" id="code-button" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>`);
+    generateMadlibs();
 
     $("#code-button").on("click", () => {
-        printMadlibs();
+        let noun = $("#word1").val();
+        printMadlibs(
+            [
+                $("#word1").val(),
+                $("#word2").val(),
+                $("#word3").val(),
+                $("#word4").val(),
+                $("#word5").val(),
+                $("#word6").val(),
+                $("#word7").val(),
+                $("#word8").val(),
+                $("#word9").val(),
+                $("#word10").val()
+            ],
+            lib);
     });
 }
 
-function printMadlibs() {
+function printMadlibs(array, lib) {
     $(".code-app").html("");
-    $(".code-app").append(`<a href="#" id="play-again-button" class="btn btn-primary">Go somewhere</a>`);
-    console.log("Button Clicked");
+    $(".code-app").append(`<div class="card mx-auto" style="width: 90%;">
+        <div class="card-body">
+            <h5 class="card-title">Your Results</h5>
+            <p class="card-text">
+            
+            </p>
+            <a href="#" id="play-again-button" class="btn btn-primary">Play Again</a>
+        </div>
+    </div>`);
+
+    lib.forEach((item, index) => {
+        $(".card-text").append(`${item} <strong><u>${array[index]}<u></strong>`);
+    });
 
     $("#play-again-button").on("click", () => {
-        console.log("OTHER Button Clicked");
         madlibsStart();
     });
 }
 
-function codepenArea(){
+function codepenArea() {
     $(".codepen").append(`This is where the codepen goes`);
 }
 
