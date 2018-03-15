@@ -4,3 +4,4 @@ lib/node_modules
 dist/
 css/
 .vscode/
+js/codepenExercise.js
