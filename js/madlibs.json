@@ -1,16 +1,16 @@
 [
     {
-        "1": "value",
-        "2": "value",
-        "3": "value",
-        "4": "value",
-        "5": "value",
-        "6": "value",
-        "7": "value",
-        "8": "value",
-        "9": "value",
-        "10": "value",
-        "full": "This, is, the, full, madlib"
+        "1": "Food:",
+        "2": "A Person:",
+        "3": "A Place:",
+        "4": "Animals:",
+        "5": "A Professional (like “Baker”):",
+        "6": "Feeling:",
+        "7": "Things (plural):",
+        "8": "Things (plural):",
+        "9": "A Piece of Clothing:",
+        "10": "Verb (ending in “ing”):",
+        "full": "Say/, the photographer said as the camera flashed! / and I had gone to / to get our photos taken today. The first photo we really wanted was a picture of us dressed as / pretending to be a /. When we saw the proofs of it, I was a bit / because it looked different than in my head. (I hadn't imagined so many / behind us.) However, the second photo was exactly what I wanted. We both looked like / wearing / and /--exactly what I had in mind!"
     },
     {
         "1": "value",
@@ -23,7 +23,7 @@
         "8": "value",
         "9": "value",
         "10": "value",
-        "full": "This, is, the, full, madlib"
+        "full": "Say/, the photographer said as the camera flashed! / and I had gone to / to get our photos taken today. The first photo we really wanted was a picture of us dressed as / pretending to be a /. When we saw the proofs of it, I was a bit / because it looked different than in my head. (I hadn't imagined so many / behind us.) However, the second photo was exactly what I wanted. We both looked like / wearing / and /--exactly what I had in mind!"
     },
     {
         "1": "value",
@@ -36,6 +36,6 @@
         "8": "value",
         "9": "value",
         "10": "value",
-        "full": "This, is, the, full, madlib"
+        "full": "Say/, the photographer said as the camera flashed! / and I had gone to / to get our photos taken today. The first photo we really wanted was a picture of us dressed as / pretending to be a /. When we saw the proofs of it, I was a bit / because it looked different than in my head. (I hadn't imagined so many / behind us.) However, the second photo was exactly what I wanted. We both looked like / wearing / and /--exactly what I had in mind!"
     }
 ]

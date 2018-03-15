@@ -35,7 +35,7 @@ function generateMadlibs() {
             let full = keys.pop();
             let value = selected[full];
             //break the solution on "," to create array
-            lib = value.split(",");
+            lib = value.split("/");
             keys.forEach((item) => {
                 $(".word-inputs").append(`<label for="word${item}">${selected[item]}</label>
             <input type="text" class="form-control" id="word${item}" placeholder="placeholder">`);
@@ -73,7 +73,8 @@ function madlibsStart() {
                 $("#word7").val(),
                 $("#word8").val(),
                 $("#word9").val(),
-                $("#word10").val()
+                $("#word10").val(),
+                ""
             ],
             lib);
     });
