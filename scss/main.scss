@@ -48,12 +48,18 @@ a {
     }
 }
 
-.active {
+.active-nav {
     background-color: #DF6E21;
 }
 
 .card {
+    margin-top: 20px;
     margin-bottom: 10px;
+    border: 1px solid $purple !important;
+}
+
+.btn-primary{
+    background: $purple !important;
 }
 
 .card-img-top {

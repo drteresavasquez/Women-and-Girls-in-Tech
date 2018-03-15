@@ -11,13 +11,20 @@ function getMadLibsData() {
 
 let buildCodeOnDOM = () => {
     $(".container").append(`
-    <h3 class="page-heading">Code a MadLibs App!</h3>
-    <div class="row">
-        <div class="col-md-5 code-app">            
-        </div>
-        <div class="col-md-7 codepen">
-        </div>
-    </div>`);
+    <h3 class="page-heading">Fun with MadLibs!</h3>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Code MadLibs</a>
+                
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Play MadLibs!</a>
+            </div>
+        </nav>
+
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active codepen" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"></div>
+
+            <div class="tab-pane fade code-app" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"></div>
+        </div>`);
 
     //append madlibs app to DOM
     madlibsStart();
@@ -47,13 +54,12 @@ function generateMadlibs() {
 function madlibsStart() {
     $(".code-app").html("");
     $(".code-app").append(`<div class="card mx-auto" style="width: 90%;">
-        <img class="card-img-top" src="./images/madlibs.jpeg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">Enter Your Words...</h5>
             <p class="card-text word-inputs"> 
                   
             </p>
-            <a href="#" id="code-button" class="btn btn-primary">Go somewhere</a>
+            <a href="#" id="code-button" class="btn btn-primary">Get MadLib!</a>
         </div>
     </div>`);
 
@@ -102,7 +108,8 @@ function printMadlibs(array, lib) {
 }
 
 function codepenArea() {
-    $(".codepen").append(`This is where the codepen goes`);
+    $(".codepen").append(`<p data-height="682" data-theme-id="light" data-slug-hash="b5dbe71d47493033f5dccba7a8f543b8" data-default-tab="result" data-user="drtechmom" data-embed-version="2" data-pen-title="MadLibs" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/drtechmom/pen/b5dbe71d47493033f5dccba7a8f543b8/">MadLibs</a> by Dr. Tech Mom (<a href="https://codepen.io/drtechmom">@drtechmom</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>`);
 }
 
 module.exports = {
