@@ -13,9 +13,9 @@ let buildCodeOnDOM = () => {
     $(".container").append(`
     <h3 class="page-heading">Code a MadLibs App!</h3>
     <div class="row">
-        <div class="col-md code-app">            
+        <div class="col-md-4 code-app">            
         </div>
-        <div class="col-md codepen">
+        <div class="col-md-8 codepen">
         </div>
     </div>`);
 
@@ -37,8 +37,8 @@ function generateMadlibs() {
             //break the solution on "," to create array
             lib = value.split("/");
             keys.forEach((item) => {
-                $(".word-inputs").append(`<label for="word${item}">${selected[item]}</label>
-            <input type="text" class="form-control" id="word${item}" placeholder="placeholder">`);
+                $(".word-inputs").append(`
+            <input type="text" class="form-control" id="word${item}" placeholder="${selected[item]}">`);
             });
         });
 }
@@ -51,7 +51,7 @@ function madlibsStart() {
         <div class="card-body">
             <h5 class="card-title">Enter Your Words...</h5>
             <p class="card-text word-inputs"> 
-            
+                  
             </p>
             <a href="#" id="code-button" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -86,7 +86,6 @@ function printMadlibs(array, lib) {
         <div class="card-body">
             <h5 class="card-title">Your Results</h5>
             <p class="card-text">
-            
             </p>
             <a href="#" id="play-again-button" class="btn btn-primary">Play Again</a>
         </div>
