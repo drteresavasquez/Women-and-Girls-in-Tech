@@ -2,7 +2,7 @@
 
 let $ = require('jquery');
 
-let buildMoneyOnDOM = () =>{
+let buildMoneyOnDOM = () => {
     $(".container").append(`
     <div class="row">
     <div class="col-sm">

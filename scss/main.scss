@@ -4,6 +4,10 @@
     padding: 0 !important;
 }
 
+.page-heading{
+    padding-left: 20px;
+}
+
 a {
     color: #DF6E21;
     &:hover {
@@ -12,17 +16,8 @@ a {
     }
 }
 
-.header {
-    background: linear-gradient(#A27781, #CFA5AE);
-    flex-direction: column;
-    padding-top: 15px !important;
-    &.header a {
-        color: white;
-    }
-}
-
 .header-2 {
-    background-color: #2096BA;
+    background-color: #2A0D45;
 }
 
 .container {
@@ -58,8 +53,19 @@ a {
 }
 
 .card-img-top {
-    height: 180px;
+    // height: 180px;
 }
+
+.code-app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.code-button{
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width: 600px) {
     .icons a{
@@ -70,5 +76,9 @@ a {
     }
     .card-img-top {
         height: 100%;
+    }
+    .page-heading{
+        padding-left: 0px;
+        text-align: center;
     }
 }
